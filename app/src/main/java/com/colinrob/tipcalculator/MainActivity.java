@@ -16,8 +16,6 @@ public class MainActivity extends ActionBarActivity {
     private static final String BILL_WITHOUT_TIP = "BILL_WITHOUT_TIP";
 
     private double billBeforeTip;
-    private double tipAmount;
-    private double finalBill;
 
     EditText billBeforeTipET;
     EditText tipAmountET;
@@ -31,12 +29,8 @@ public class MainActivity extends ActionBarActivity {
 
         if(savedInstanceState == null) {
             billBeforeTip = 0.0;
-            tipAmount = .15;
-            finalBill = 0.0;
         } else {
             billBeforeTip = savedInstanceState.getDouble(TOTAL_BILL);
-            tipAmount = savedInstanceState.getDouble(CURRENT_TIP);
-            finalBill = savedInstanceState.getDouble(BILL_WITHOUT_TIP);
         }
 
         billBeforeTipET = (EditText)findViewById(R.id.editTextBill);
