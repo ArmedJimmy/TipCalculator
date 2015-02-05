@@ -68,18 +68,18 @@ public class MainActivity extends ActionBarActivity {
 
         private void updateTipAndFinalBill()
         {
-            double tipAmount = Double.parseDouble(billBeforeTipET.getText().toString());
+            double tipAmount = Double.parseDouble(tipAmountET.getText().toString());
 
             double finalBillTemp = billBeforeTip + (billBeforeTip * tipAmount);
 
-            finalBillET.setText(String.format("%.02", finalBillTemp));
+            finalBillET.setText(String.format("%.2f", finalBillTemp));
         }
 
         @Override
         public void afterTextChanged(Editable s) {
 
         }
-    };¬
+    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
